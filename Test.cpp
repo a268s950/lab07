@@ -11,4 +11,16 @@
 #include <algorithm>
 
 
-	}
+	bool Test::TestisEmpty()//FAILS
+  {
+
+				LinkedListOfInts LLObject; //creates an object from the linkedlistofints.h class
+				if(LLObject.toVector().size()==0)
+				{
+				return false;
+				}
+				else
+				{
+				return false;
+				}
+  }
