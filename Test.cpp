@@ -120,3 +120,34 @@
 	*   @post One new element added to the front of the list.
 	*   @return none.
 	*/
+	bool Test::TestaddFront()//PASSES
+	{
+
+
+			LinkedListOfInts LLObject;
+			LLObject.addFront(2);
+			LLObject.addFront(1);
+			//assuming initial size is zero
+			//if(LLObject.toVector().size()==0)
+			//below line was creating seg faults so made our own vector
+			int vectorSize = LLObject.toVector().size();
+			std::vector<int> LLVector;
+			LLVector = LLObject.toVector();
+			if(LLObject.toVector().size()!=0)
+			{
+				if(LLVector[0] == 1)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+			else
+			{
+				return false;
+			}
+
+
+	}
