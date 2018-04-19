@@ -36,3 +36,28 @@
 		else
 			return false;
   }
+
+	/** @pre the value is a valid T.
+	*   @post none.
+	*   @return true if the value is in the list, false otherwise.
+	*/
+	bool Test::Testsearch()//PASSES
+	{
+		LinkedListOfInts LLObject;
+		LLObject.addFront(1);
+		if(LLObject.search(1))
+		{
+			if(!LLObject.search(2))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
