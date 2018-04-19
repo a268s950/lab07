@@ -151,3 +151,49 @@
 
 
 	}
+
+	/** @pre None
+	*   @post One element is removed from the back of the list.
+	*   @return true if the back element was removed, false if the list is empty.
+	*/
+	bool Test::TestremoveBack()//FAILS
+	{
+
+			LinkedListOfInts LLObject;
+
+			std::vector<int> LLVector1;
+			LLVector1 = LLObject.toVector();
+			int initialVectorSize = LLObject.toVector().size();
+			if(initialVectorSize!=0)
+			{
+					int initialLastValue = LLVector1[initialVectorSize-1];
+
+					LLObject.removeBack();
+
+					std::vector<int> LLVector2;
+					LLVector2 = LLObject.toVector();
+					int vectorSizeAfterRemove = LLObject.toVector().size();
+					int finalLastValue = LLVector2[vectorSizeAfterRemove-1];
+
+					//assuming initial size is zero
+					if(initialVectorSize == vectorSizeAfterRemove + 1)
+					{
+						if(initialLastValue != finalLastValue)
+						{
+							return true;
+						}
+						else
+						{
+							return false;
+						}
+					}
+					else
+					{
+						return false;
+					}
+			}
+			else
+			{
+					return false;
+			}
+	}
