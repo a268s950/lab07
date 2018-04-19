@@ -24,3 +24,15 @@
 				return false;
 				}
   }
+	/** @pre None.
+	*   @post None.
+	*   @return the number of elements in the list.
+	*/
+	bool Test::Testsize() //PASSES
+	{
+		LinkedListOfInts LLObject; //creates an object from the linkedlistofints.h class
+		if(LLObject.toVector().size()==LLObject.size())
+			return true;
+		else
+			return false;
+  }
