@@ -1,0 +1,19 @@
+isEmpty Fails
+size Passes
+search Passes
+addBack Fails
+addFront Passes
+removeBack Fails
+removeFront Fails
+
+Based off these results and some testing, I have made a few conclusions:
+
+addBack fails while addFront passes. Based off a test I made, it appears that
+an integer is added because the size increases by one, but just not at the back,
+so I think that it adds to the front instead of the back.
+
+removeFront and removeBack do not appear to change size values, so they don't
+remove anything at all.
+
+isEmpty fails, so it must not use the size() function since that passes.
+I'm not sure why it fails though.
